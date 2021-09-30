@@ -14,14 +14,14 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 #### REQUIRED (10pts)
 - [x] (2pts) User sees an app icon on the home screen and a styled launch screen.
 - [x] (5pts) User can view and scroll through a list of movies now playing in theaters.
-- [ ] (3pts) User can view the movie poster image for each movie.
+- [x] (3pts) User can view the movie poster image for each movie.
 
 #### BONUS
 - [ ] (2pt) User can view the app on various device sizes and orientations.
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-![](ezgif.com-gif-maker.gif)
+![](assignment0.gif)
 
 ### Notes
-- Unfortunately my Wi-Fi speeds are preventing me from downloading the xcode tools in a timely manner (currently at 8+ hours) which blocked me from setting up CocoaPods and completing the third task which is displaying the poster image.
+- Unfortunately there is an issue with the scaling of my app. After I installed AlamofireImage and added the movie poster images, it changed the aspect ratio of my app.
