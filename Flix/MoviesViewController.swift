@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -15,6 +16,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 150
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -55,10 +58,11 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
         
-        let baseURL = "https://image.tmdb.org/t/p/w185"
+        let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
-        let posterURL = URL(string: baseURL + posterPath)
+        let posterUrl = URL(string: baseUrl + posterPath)
         
+        cell.posterView.af.setImage(withURL: posterUrl!)
         
         return cell
     }
